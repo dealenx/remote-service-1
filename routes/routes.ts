@@ -8,6 +8,8 @@ import {
   deleteTodoItem,
 } from "../controllers/todos.ts";
 
+import { getArticles } from "../controllers/articles.ts";
+
 // A helper function to get the file contents
 // of a specific file path in the public directory
 function getPublicFile(...filePath: string[]): Promise<Uint8Array> {
@@ -33,6 +35,7 @@ router
   .get("/todo/:id", getTodoItem)
   .post("/todo", saveTodo)
   .put("/todo/:id", updateTodoItem)
-  .delete("/todo/:id", deleteTodoItem);
+  .delete("/todo/:id", deleteTodoItem)
+  .get("/articles", getArticles);
 
 export default router;
