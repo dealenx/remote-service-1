@@ -6,6 +6,7 @@ const app = new Application();
 
 app.use(router.routes());
 app.use(router.allowedMethods());
+app.use(oakCors({ origin: "*" }));
 
 console.log(`App started and listening on ${PORT} `);
 
