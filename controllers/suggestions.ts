@@ -7,7 +7,7 @@ let suggestionsRecommendationsList: any = {
   status: true,
   msg: "Ok",
   result: {
-    total_count: 3,
+    total_count: 4,
     limit: 25,
     first: 1,
     last: 1,
