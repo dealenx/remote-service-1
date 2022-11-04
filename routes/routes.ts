@@ -29,16 +29,16 @@ router
   .get("/articles", getArticles)
   .get("/recommendations-suggestions", getRecommendationsSuggestions);
 
-// router.get("/", async (ctx, next) => {
-//   // Set the contents of the "index.html" file to the response body
-//   ctx.response.body = await getPublicFile("index.html");
+router.get("/", async (ctx, next) => {
+  // Set the contents of the "index.html" file to the response body
+  ctx.response.body = await getPublicFile("index.html");
 
-//   // Set the appropriate resopnse type for HTML
-//   ctx.response.type = "text/html";
+  // Set the appropriate resopnse type for HTML
+  ctx.response.type = "text/html";
 
-//   // This isn't technically needed here, but it's good practice
-//   // because other middleware might need to run in more complicated routes
-//   await next();
-// });
+  // This isn't technically needed here, but it's good practice
+  // because other middleware might need to run in more complicated routes
+  await next();
+});
 
 export default router;
