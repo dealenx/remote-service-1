@@ -39,6 +39,6 @@ router
   .put("/todo/:id", updateTodoItem)
   .delete("/todo/:id", deleteTodoItem)
   .get("/articles", getArticles)
-  .get("/suggestions", getRecommendationsSuggestions);
+  .get("/recommendations-suggestions", getRecommendationsSuggestions);
 
 export default router;
