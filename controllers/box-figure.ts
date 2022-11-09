@@ -17,12 +17,12 @@ export const calcArea = async ({
   console.log("response", response);
 
   const calcCoubArea = (a: number) => {
-    return a * a * a;
+    return 6 * a * a;
   };
 
-  const result: number = 6 * bodyValue.a * bodyValue.a;
+  const result: number = calcCoubArea(bodyValue.a);
 
-  response.body = { result: calcCoubArea(bodyValue.a) };
+  response.body = { result };
 };
 
 export default {
