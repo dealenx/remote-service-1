@@ -12,6 +12,8 @@ import { getArticles } from "../controllers/articles.ts";
 
 import { getRecommendationsSuggestions } from "../controllers/suggestions.ts";
 
+import boxFigure from "../controllers/box-figure.ts";
+
 // A helper function to get the file contents
 // of a specific file path in the public directory
 function getPublicFile(...filePath: string[]): Promise<Uint8Array> {
@@ -27,7 +29,8 @@ router
   .put("/todo/:id", updateTodoItem)
   .delete("/todo/:id", deleteTodoItem)
   .get("/articles", getArticles)
-  .get("/recommendations-suggestions", getRecommendationsSuggestions);
+  .get("/recommendations-suggestions", getRecommendationsSuggestions)
+  .post("/box/calc-area", boxFigure.calcArea);
 
 router.get("/", async (ctx, next) => {
   // Set the contents of the "index.html" file to the response body
